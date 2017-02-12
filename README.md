@@ -24,6 +24,7 @@ for example:
 creates a danmonroe_java_audition directory
 
 
+
 Complete the katas assigned to you.  Commit your changes as you develop.
 
 
