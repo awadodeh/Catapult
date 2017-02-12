@@ -1,4 +1,4 @@
-package com.audition.service.coinManager.validator;
+package com.audition.service.validator;
 
 import com.audition.model.CoinType;
 import com.audition.service.coinManager.CoinManagerImpl;

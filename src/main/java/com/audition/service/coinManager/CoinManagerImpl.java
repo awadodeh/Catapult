@@ -3,7 +3,7 @@ package com.audition.service.coinManager;
 import com.audition.exception.InvalidCoinTypeException;
 import com.audition.model.Coin;
 import com.audition.model.CoinType;
-import com.audition.service.coinManager.validator.CoinValidator;
+import com.audition.service.validator.CoinValidator;
 
 import java.util.ArrayList;
 import java.util.List;
