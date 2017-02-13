@@ -1,24 +1,32 @@
 package com.audition.service.validator;
 
 import com.audition.model.CoinType;
-import com.audition.service.coinManager.CoinManagerImpl;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Awad on 2/10/17.
  */
 public class CoinValidator {
 
-    private CoinManagerImpl coinManager;
+    List<CoinType> validCoinTypes;
 
-    public CoinValidator(CoinManagerImpl coinManager) {
-        this.coinManager = coinManager;
+
+    public CoinValidator() {
+
+        validCoinTypes = new ArrayList<CoinType>();
+        validCoinTypes.add(CoinType.DIME);
+        validCoinTypes.add(CoinType.NICKEL);
+        validCoinTypes.add(CoinType.QUARTER);
+
+    }
+
+    public CoinValidator(List<CoinType> validCoinTypes) {
+        this.validCoinTypes = validCoinTypes;
     }
 
     public boolean isCoinValid(CoinType coinType){
-            if(coinManager.getValidCoinTypes().contains(coinType)) {
-                return true;
-            }else {
-                return false;
-            }
+        return validCoinTypes.contains(coinType);
     }
 }
