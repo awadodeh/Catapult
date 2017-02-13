@@ -43,9 +43,8 @@ public class NoCoinsState implements State{
         if(coinValidator.isCoinValid(coin.getCoinType())){
 
             currentAmount = vendingMachine.getCurrentAmount()+coin.getCoinType().getValue();
-
-
             vendingMachine.setCurrentAmount(currentAmount);
+            System.out.println("Current Amount is: "+currentAmount);
 
         }else{
             vendingMachine.addToCoinReturnList(coin);
@@ -57,13 +56,14 @@ public class NoCoinsState implements State{
 
 
     public void selectProduct(Product product) {
-
-//        System.out.println("You need to pay first");
-        System.out.println(product.getProductName() + "'s Price is: " + product.getProductPrice());
-
+        System.out.println("ISERT COIN!");
     }
 
     public void returnCoins() {
         System.out.println("You need to pay first");
+    }
+
+    public void dispense(Product product) {
+
     }
 }

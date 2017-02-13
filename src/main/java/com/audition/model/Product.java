@@ -8,6 +8,7 @@ public class Product {
     private String productID;
     private String productName;
     private double productPrice;
+    private int productCount;
 
 
     public Product() {
@@ -15,12 +16,14 @@ public class Product {
         this.productID ="0";
         this.productName="Empty";
         this.productPrice = 0;
+        this.productCount = 0;
     }
 
     public Product(String productID, String productName, double productPrice) {
         this.productID = productID;
         this.productName = productName;
         this.productPrice = productPrice;
+        this.productCount = 1;
     }
 
 

@@ -12,6 +12,7 @@ public interface State {
     double insertCoins(Coin coin) throws InvalidCoinTypeException;
     void selectProduct(Product product);
     void returnCoins();
+    void dispense(Product product);
 //    void checkExactChangeOnly();
 
 
